@@ -3,7 +3,7 @@ const button = document.querySelector('button');
 let modal;
 let backdrop;
 
-button.addEventListener('click', showModelHandler);
+button.addEventListener('click', showModalHandler);
 
 function showModalHandler() {
   if (modal) {
@@ -30,5 +30,20 @@ function showModalHandler() {
   modal.append(modalCancelAction);
   modal.append(modalConfirmAction);
 
-  document.body
+  document.body.append(modal);
+
+  backdrop = document.createElement('div');
+  backdrop.className = 'backdrop';
+
+  backdrop.addEventListener('click', closeModalHandler);
+
+  document.body.append(backdrop);
+}
+
+function closeModalHandler() {
+  modal.remove();
+  modal = null;
+
+  backdrop.remove();
+  backdrop = null;
 }
