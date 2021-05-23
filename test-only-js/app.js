@@ -17,12 +17,12 @@ function showModalHandler() {
   modalText.textContent = 'Are you sure?';
 
   const modalCancelAction = document.createElement('button');
-  modalCancelAction.textContent = 'Cancel';
+  modalCancelAction.textContent = '戻る';
   modalCancelAction.className = 'btn btn--alt';
   modalCancelAction.addEventListener('click', closeModalHandler);
 
   const modalConfirmAction = document.createElement('button');
-  modalConfirmAction.textContent = 'Confirm';
+  modalConfirmAction.textContent = '確認';
   modalConfirmAction.className = 'btn';
   modalConfirmAction.addEventListener('click', closeModalHandler);
 
